@@ -13,7 +13,6 @@ pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
 fps = 8
 
-snake_speed = 15
 blocksize = 20
 direction = 'R'
 change_to = direction
