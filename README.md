@@ -5,5 +5,6 @@
 **Apr 16, 2025, 10:18 PM EDT** - Added window where arcade game will be displayed (Marwa)<br />
 **Apr 16, 2025, 10:35 PM EDT** - Initialized what the snake will look like, not displayed yet (Namaa)<br />
 **Apr 16, 2025, 10:49 PM EDT** - Displayed the snake as inialized previously (Michael)<br />
+**Apr 16, 2025, 11:04 PM EDT** - Snake now moves from its original position based on the direction of the user's arrow key press (Marwa)<br />
 <br />
 *Add future commits here!*
