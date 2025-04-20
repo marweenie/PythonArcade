@@ -1,4 +1,5 @@
 #Main file
+#Inspired by GeeksForGeeks Snake code snippet: https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/
 from turtledemo import clock
 
 import pygame
@@ -53,6 +54,11 @@ while running:
     for pos in snake_body:
         pygame.draw.rect(screen, (0, 255, 0),
                          pygame.Rect(pos[0], pos[1], blocksize, blocksize))
+
+    if snake_position[0] < 0 or snake_position[0] > WIDTH-10:
+        break
+    if snake_position[1] < 0 or snake_position[1] > HEIGHT-10:
+        break
 
 
     clock.tick(fps)
