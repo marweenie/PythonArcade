@@ -23,6 +23,7 @@ fruit_position = [random.randrange(1, (WIDTH // blocksize)) * 10,
                   random.randrange(1, (HEIGHT // blocksize)) * 10]
 
 fruit_spawn = True
+snake_collision = False
 
 running = True
 while running:
@@ -80,6 +81,15 @@ while running:
         break
     if snake_position[1] < 0 or snake_position[1] > HEIGHT - 10:
         pygame.time.delay(1000)
+        break
+
+    for segment in snake_body[1:]:
+        if snake_position[0] == segment[0] and snake_position[1] == segment[1]:
+            snake_collision = True
+            pygame.time.delay(1000)
+            break
+
+    if snake_collision:
         break
 
     clock.tick(fps)
