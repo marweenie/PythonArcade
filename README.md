@@ -12,5 +12,6 @@
 **Apr 20, 2025, 11:33 PM EDT** - Apple is now the same size as the snake, added a small tolerance for the snake to consume the apple in case it isn't in line with the apple (Michael)<br />
 **Apr 21, 2025, 12:28 AM EDT** - Snake now grows whenever it eats an apple, snake can still cross through its own body however (Namaa)<br />
 **Apr 21, 2025, 01:42 AM EDT** - Game will close if the snake makes contact with its body (Michael)<br />
+**Apr 21, 2025, 09:33 AM EDT** - Game now displays the score on the top left counting the number of apples the snake has eaten and a game over indicator in the middle when the snake either goes out of bounds or collides with its own body (Michael)<br />
 <br />
 *Add future commits here!*
