@@ -21,8 +21,8 @@ change_to = direction
 snake_position = [100, 50]
 snake_body = [[100, 50]]
 
-fruit_position = [random.randrange(1, (WIDTH//10)) * 10, 
-                  random.randrange(1, (HEIGHT//10)) * 10]
+fruit_position = [random.randrange(1, (WIDTH//blocksize)) * 10, 
+                  random.randrange(1, (HEIGHT//blocksize)) * 10]
 
 fruit_spawn = True
 
@@ -52,12 +52,12 @@ while running:
     elif direction == 'R':
         snake_position[0] += blocksize
 
-    if snake_position[0] == fruit_position[0] and snake_position[1] == fruit_position[1]:
+    if (snake_position[0] <= fruit_position[0]+10 and snake_position[0] >= fruit_position[0]-10) and (snake_position[1] <= fruit_position[1]+10 and snake_position[1] >= fruit_position[1]-10):
         fruit_spawn = False
 
     if not fruit_spawn:
-        fruit_position = [random.randrange(1, (WIDTH//10)) * 10, 
-                          random.randrange(1, (HEIGHT//10)) * 10]
+        fruit_position = [random.randrange(1, (WIDTH//blocksize)) * 10, 
+                          random.randrange(1, (HEIGHT//blocksize)) * 10]
         
     fruit_spawn = True
 
@@ -71,7 +71,7 @@ while running:
                          pygame.Rect(pos[0], pos[1], blocksize, blocksize))
 
     pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(
-        fruit_position[0], fruit_position[1], 10, 10))
+        fruit_position[0], fruit_position[1], blocksize, blocksize))
 
     if snake_position[0] < 0 or snake_position[0] > WIDTH-10:
         pygame.time.delay(1000) #ms

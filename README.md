@@ -9,5 +9,6 @@
 **Apr 20, 2025, 02:24 AM EDT** - Game automatically closes when the snake tries to go out of bounds, game over mechanic not yet implemented (Michael)<br />
 **Apr 20, 2025, 08:06 PM EDT** - Apple for snake to eat now displays on the screen, but it is too small for the snake to consume (Michael)<br />
 **Apr 20, 2025, 11:12 PM EDT** - Game will briefly pause before quitting when the snake tries to go out of bounds (Marwa)<br />
+**Apr 20, 2025, 11:33 PM EDT** - Apple is now the same size as the snake, added a small tolerance for the snake to consume the apple in case it isn't in line with the apple (Michael)<br />
 <br />
 *Add future commits here!*
