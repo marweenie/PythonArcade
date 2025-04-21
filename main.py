@@ -74,8 +74,10 @@ while running:
         fruit_position[0], fruit_position[1], 10, 10))
 
     if snake_position[0] < 0 or snake_position[0] > WIDTH-10:
+        pygame.time.delay(1000) #ms
         break
     if snake_position[1] < 0 or snake_position[1] > HEIGHT-10:
+        pygame.time.delay(1000)
         break
 
 
