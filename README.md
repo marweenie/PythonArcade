@@ -8,5 +8,6 @@
 **Apr 16, 2025, 11:04 PM EDT** - Snake now moves from its original position based on the direction of the user's arrow key press (Marwa)<br />
 **Apr 20, 2025, 02:24 AM EDT** - Game automatically closes when the snake tries to go out of bounds, game over mechanic not yet implemented (Michael)<br />
 **Apr 20, 2025, 08:06 PM EDT** - Apple for snake to eat now displays on the screen, but it is too small for the snake to consume (Michael)<br />
+**Apr 20, 2025, 11:12 PM EDT** - Game will briefly pause before quitting when the snake tries to go out of bounds (Marwa)<br />
 <br />
 *Add future commits here!*
