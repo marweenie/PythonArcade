@@ -1,5 +1,5 @@
-#Main file
-#Inspired by GeeksForGeeks Snake code snippet: https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/
+# Main file
+# Inspired by GeeksForGeeks Snake code snippet: https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/
 from turtledemo import clock
 
 import pygame
@@ -7,10 +7,8 @@ import random
 
 pygame.init()
 
-#hi
-
 WIDTH, HEIGHT = 600, 400
-screen = pygame.display.set_mode((WIDTH,HEIGHT))
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
 fps = 8
@@ -21,14 +19,14 @@ change_to = direction
 snake_position = [100, 50]
 snake_body = [[100, 50]]
 
-fruit_position = [random.randrange(1, (WIDTH//blocksize)) * 10, 
-                  random.randrange(1, (HEIGHT//blocksize)) * 10]
+fruit_position = [random.randrange(1, (WIDTH // blocksize)) * 10,
+                  random.randrange(1, (HEIGHT // blocksize)) * 10]
 
 fruit_spawn = True
 
 running = True
 while running:
-# handling key events
+    # handling key events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -52,19 +50,23 @@ while running:
     elif direction == 'R':
         snake_position[0] += blocksize
 
-    if (snake_position[0] <= fruit_position[0]+10 and snake_position[0] >= fruit_position[0]-10) and (snake_position[1] <= fruit_position[1]+10 and snake_position[1] >= fruit_position[1]-10):
+    ate_fruit = False
+    if (snake_position[0] <= fruit_position[0] + 10 and snake_position[0] >= fruit_position[0] - 10) and (
+            snake_position[1] <= fruit_position[1] + 10 and snake_position[1] >= fruit_position[1] - 10):
         fruit_spawn = False
+        ate_fruit = True
 
     if not fruit_spawn:
-        fruit_position = [random.randrange(1, (WIDTH//blocksize)) * 10, 
-                          random.randrange(1, (HEIGHT//blocksize)) * 10]
-        
+        fruit_position = [random.randrange(1, (WIDTH // blocksize)) * 10,
+                          random.randrange(1, (HEIGHT // blocksize)) * 10]
+
     fruit_spawn = True
 
-    screen.fill((0,0,0)) #black
+    screen.fill((0, 0, 0))  # black
 
-    snake_body.insert(0,list(snake_position))
-    snake_body.pop()
+    snake_body.insert(0, list(snake_position))
+    if not ate_fruit:
+        snake_body.pop()
 
     for pos in snake_body:
         pygame.draw.rect(screen, (0, 255, 0),
@@ -73,13 +75,12 @@ while running:
     pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(
         fruit_position[0], fruit_position[1], blocksize, blocksize))
 
-    if snake_position[0] < 0 or snake_position[0] > WIDTH-10:
-        pygame.time.delay(1000) #ms
+    if snake_position[0] < 0 or snake_position[0] > WIDTH - 10:
+        pygame.time.delay(1000)  # ms
         break
-    if snake_position[1] < 0 or snake_position[1] > HEIGHT-10:
+    if snake_position[1] < 0 or snake_position[1] > HEIGHT - 10:
         pygame.time.delay(1000)
         break
-
 
     clock.tick(fps)
     pygame.display.update()
