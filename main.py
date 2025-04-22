@@ -4,12 +4,14 @@ from turtledemo import clock
 
 import pygame
 import random
+pygame.mixer.init()
 
 WIDTH, HEIGHT = 600, 400
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
 fps = 8
+gameover_sound = pygame.mixer.Sound("game-over.mp3")
 
 def show_score(score):
     font = pygame.font.SysFont(None, 36)
@@ -25,7 +27,7 @@ def show_gameover():
     screen.blit(gameover_text, (137, 175))
 
     mouse = pygame.mouse.get_pos()
-    
+
     if 230 <= mouse[0] <= 230+144 and 270 <= mouse[1] <= 270+35:
         pygame.draw.rect(screen, (170, 170, 170),
                          pygame.Rect(230, 270, 144, 35))
@@ -58,6 +60,7 @@ def main():
     fruit_spawn = True
     snake_collision = False
     game_over = False
+    gameover_sound_played = False
 
     score = 0
 
@@ -144,6 +147,11 @@ def main():
                 show_gameover()
                 # pygame.time.delay(1000)
                 # break
+        if game_over:
+            if not gameover_sound_played:
+                gameover_sound.play()
+                gameover_sound_played = True
+            show_gameover()
 
         if snake_collision:
             break
