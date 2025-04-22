@@ -102,6 +102,8 @@ while running:
         break
 
     for segment in snake_body[1:]:
+        if (segment[0] <= fruit_position[0] + 10 and segment[0] >= fruit_position[0] - 10) and (segment[1] <= fruit_position[1] + 10 and segment[1] >= fruit_position[1] - 10):
+            fruit_spawn = False
         if snake_position[0] == segment[0] and snake_position[1] == segment[1]:
             snake_collision = True
             show_gameover()
