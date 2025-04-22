@@ -13,6 +13,8 @@ clock = pygame.time.Clock()
 fps = 8
 gameover_sound = pygame.mixer.Sound("game-over.mp3")
 applebite_sound = pygame.mixer.Sound("applebite.mp3")
+pygame.mixer.music.load("backgroundmusic.mp3")
+pygame.mixer.music.play(-1)  #loop forever
 
 def show_score(score):
     font = pygame.font.SysFont(None, 36)
@@ -48,7 +50,10 @@ def show_gameover():
 
 def main():
     pygame.init()
+    pygame.mixer.music.load("backgroundmusic.mp3")
+    pygame.mixer.music.play(-1, fade_ms=2000)
 
+    pygame.mixer.music.play(-1)
     blocksize = 20
     direction = 'R'
     change_to = direction
@@ -157,12 +162,14 @@ def main():
                 # pygame.time.delay(1000)
                 # break
         if game_over:
+            pygame.mixer.music.stop()
             if not gameover_sound_played:
                 gameover_sound.play()
                 gameover_sound_played = True
             show_gameover()
 
         if snake_collision:
+            pygame.mixer.music.stop()
             break
 
         clock.tick(fps)
