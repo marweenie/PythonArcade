@@ -17,5 +17,12 @@
 **Apr 21, 2025, 09:41 PM EDT** - Added buttons for user to either play again or quit game when game over occurs, no need to close game automatically now (Michael)<br />
 **Apr 21, 2025, 09:56 PM EDT** - Sound now plays when the game over event is executed (Marwa)<br />
 **Apr 21, 2025, 10:09 PM EDT** - Appearance of snake is now changed to an orange-blue pattern from all green, ensuring that the length of the snake's body is visible (Marwa)<br />
+**Apr 21, 2025, 10:20 PM EDT** - Added gridlines to game background for a stylish appearance (Marwa)<br />
 <br />
 *Add future commits here!*
+<br /><br />
+
+# Resources Used
+**Main Snake Game** - https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/#<br />
+**Button Mechanics** - https://www.geeksforgeeks.org/how-to-create-buttons-in-a-game-using-pygame/<br />
+**Play Again Mechanic** - https://www.geeksforgeeks.org/create-a-play-again-option-with-python-pygame/<br />
