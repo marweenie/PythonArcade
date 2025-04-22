@@ -12,6 +12,7 @@ pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
 fps = 8
 gameover_sound = pygame.mixer.Sound("game-over.mp3")
+applebite_sound = pygame.mixer.Sound("applebite.mp3")
 
 def show_score(score):
     font = pygame.font.SysFont(None, 36)
@@ -103,6 +104,7 @@ def main():
             score += 1
             fruit_spawn = False
             ate_fruit = True
+            applebite_sound.play()
 
         if not fruit_spawn:
             fruit_position = [random.randrange(1, (WIDTH // blocksize)) * 10,
