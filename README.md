@@ -18,6 +18,7 @@
 **Apr 21, 2025, 09:56 PM EDT** - Sound now plays when the game over event is executed (Marwa)<br />
 **Apr 21, 2025, 10:09 PM EDT** - Appearance of snake is now changed to an orange-blue pattern from all green, ensuring that the length of the snake's body is visible (Marwa)<br />
 **Apr 21, 2025, 10:20 PM EDT** - Added gridlines to game background for a stylish appearance (Marwa)<br />
+**Apr 21, 2025, 10:30 PM EDT** - Sound now plays when the snake eats an apple (Marwa)<br />
 <br />
 *Add future commits here!*
 <br /><br />
