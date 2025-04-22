@@ -1,7 +1,6 @@
 # Commit History
 **Apr 15, 2025, 10:42 PM EDT** - Added main.py file for 2D arcade game (Marwa)<br />
 **Apr 15, 2025, 11:44 PM EDT** - Created commit history log in README (Michael)<br />
-**Apr 15, 2025, 11:46 PM EDT** - Fixed formatting in README (Michael)<br />
 **Apr 16, 2025, 10:18 PM EDT** - Added window where arcade game will be displayed (Marwa)<br />
 **Apr 16, 2025, 10:35 PM EDT** - Initialized what the snake will look like, not displayed yet (Namaa)<br />
 **Apr 16, 2025, 10:49 PM EDT** - Displayed the snake as initialized previously (Michael)<br />
@@ -18,9 +17,15 @@
 **Apr 21, 2025, 09:56 PM EDT** - Sound now plays when the game over event is executed (Marwa)<br />
 **Apr 21, 2025, 10:09 PM EDT** - Appearance of snake is now changed to an orange-blue pattern from all green, ensuring that the length of the snake's body is visible (Marwa)<br />
 **Apr 21, 2025, 10:20 PM EDT** - Added gridlines to game background for a stylish appearance (Marwa)<br />
+**Apr 21, 2025, 10:22 PM EDT** - Added section for references/citations in README (Michael)<br />
 **Apr 21, 2025, 10:30 PM EDT** - Sound now plays when the snake eats an apple (Marwa)<br />
 **Apr 21, 2025, 10:51 PM EDT** - Music now plays in the background (Marwa)<br />
-**Apr 22, 2025, 2:57 AM EDT** - Message is displayed at the start of a new game to get the user ready, fixes to game over graphic (Michael)<br />
+**Apr 21, 2025, 11:29 PM EDT** - Michael's group evaluation made publicly available in PDF format (Michael)<br />
+**Apr 21, 2025, 11:32 PM EDT** - Added section for group evaluation screenshots in README, added screenshot of Michael's group evaluation in README (Michael)<br />
+**Apr 21, 2025, 11:34 PM EDT** - Marwa's group evaluation made publicly available in PDF format (Marwa)<br />
+**Apr 21, 2025, 11:36 PM EDT** - Added screenshot of Marwa's group evaluation in README (Michael)<br />
+**Apr 21, 2025, 1:34 AM EDT** - Namaa's group evaluation made publicly available as a screenshot in README (Namaa)<br />
+**Apr 22, 2025, 2:57 AM EDT** - Message is displayed at the start of a new game to get the user ready + fixes to game over graphic (Michael)<br />
 <br />
 *Add future commits here!*
 <br /><br />
