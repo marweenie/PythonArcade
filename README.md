@@ -15,5 +15,6 @@
 **Apr 21, 2025, 09:33 AM EDT** - Game now displays the score on the top left counting the number of apples the snake has eaten and a game over indicator in the middle when the snake either goes out of bounds or collides with its own body (Michael)<br />
 **Apr 21, 2025, 09:01 PM EDT** - Added validation checks for apple spawning, ensuring that it doesn't spawn in an area occupied by the snake's body (Michael)<br />
 **Apr 21, 2025, 09:41 PM EDT** - Added buttons for user to either play again or quit game when game over occurs, no need to close game automatically now (Michael)<br />
+**Apr 21, 2025, 09:56 PM EDT** - Sound now plays when the game over event is executed (Marwa)<br />
 <br />
 *Add future commits here!*
