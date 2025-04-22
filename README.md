@@ -29,3 +29,9 @@
 **Button Mechanics** - https://www.geeksforgeeks.org/how-to-create-buttons-in-a-game-using-pygame/<br />
 **Play Again Mechanic** - https://www.geeksforgeeks.org/create-a-play-again-option-with-python-pygame/<br />
 **Music/Sound** - https://www.youtube.com/watch?v=RjuGB1eF3NM <br />
+<br /><br />
+
+# Group Evaluations
+**Michael Sepsey** - ![image](https://github.com/user-attachments/assets/8686f225-04f4-48ee-b7b5-3a4f51725a80)<br /><br />
+**Marwa Chebeir** - <br /><br />
+**Namaa Mokhtar** - <br /><br />
