@@ -19,6 +19,7 @@
 **Apr 21, 2025, 10:09 PM EDT** - Appearance of snake is now changed to an orange-blue pattern from all green, ensuring that the length of the snake's body is visible (Marwa)<br />
 <br />
 *Add future commits here!*
+<br /><br />
 
 # Resources Used
 **Main Snake Game** - https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/#<br />
