@@ -118,9 +118,12 @@ def main():
         if not ate_fruit:
             snake_body.pop()
 
-        for pos in snake_body:
-            pygame.draw.rect(screen, (0, 255, 0),
-                            pygame.Rect(pos[0], pos[1], blocksize, blocksize))
+        for i, pos in enumerate(snake_body):
+            if i % 2 == 0:
+                color = (255, 120, 0)  # red
+            else:
+                color = (0, 120, 255)  # blue
+            pygame.draw.rect(screen, color, pygame.Rect(pos[0], pos[1], blocksize, blocksize))
 
         pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(
             fruit_position[0], fruit_position[1], blocksize, blocksize))
