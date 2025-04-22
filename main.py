@@ -111,6 +111,10 @@ def main():
         fruit_spawn = True
 
         screen.fill((0, 0, 0))  # black
+        for x in range(0, WIDTH, blocksize):
+            pygame.draw.line(screen, (40, 40, 40), (x, 0), (x, HEIGHT))  #vertical
+        for y in range(0, HEIGHT, blocksize):
+            pygame.draw.line(screen, (40, 40, 40), (0, y), (WIDTH, y))  #Horizontal
 
         mouse = pygame.mouse.get_pos()
 
