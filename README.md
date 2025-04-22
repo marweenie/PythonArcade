@@ -20,6 +20,7 @@
 **Apr 21, 2025, 10:20 PM EDT** - Added gridlines to game background for a stylish appearance (Marwa)<br />
 **Apr 21, 2025, 10:30 PM EDT** - Sound now plays when the snake eats an apple (Marwa)<br />
 **Apr 21, 2025, 10:51 PM EDT** - Music now plays in the background (Marwa)<br />
+**Apr 22, 2025, 2:57 AM EDT** - Message is displayed at the start of a new game to get the user ready, fixes to game over graphic (Michael)<br />
 <br />
 *Add future commits here!*
 <br /><br />

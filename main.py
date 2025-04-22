@@ -13,8 +13,8 @@ clock = pygame.time.Clock()
 fps = 8
 gameover_sound = pygame.mixer.Sound("game-over.mp3")
 applebite_sound = pygame.mixer.Sound("applebite.mp3")
-pygame.mixer.music.load("backgroundmusic.mp3")
-pygame.mixer.music.play(-1)  #loop forever
+# pygame.mixer.music.load("backgroundmusic.mp3")
+# pygame.mixer.music.play(-1)  #loop forever
 
 def show_score(score):
     font = pygame.font.SysFont(None, 36)
@@ -24,9 +24,12 @@ def show_score(score):
 def show_gameover():
     font = pygame.font.SysFont(None, 36)
     gameover_font = pygame.font.SysFont(None, 72)
-    gameover_text = gameover_font.render(f"GAME OVER!", True, (255, 0, 0))
+    gameover_text = gameover_font.render(f"GAME OVER!", True, (255, 255, 255))
     play_again_button_text = font.render(f"Play Again", True, (255, 255, 255))
     quit_button_text = font.render(f"Quit Game", True, (255, 255, 255))
+    
+    pygame.draw.rect(screen, (255, 0, 0),
+                     pygame.Rect(126, 164, 345, 70))
     screen.blit(gameover_text, (137, 175))
 
     mouse = pygame.mouse.get_pos()
@@ -48,6 +51,14 @@ def show_gameover():
     screen.blit(quit_button_text, (237, 335))
     pygame.display.flip()
 
+def show_loading():
+    font = pygame.font.SysFont(None, 72)
+    countdown_font = font.render(f"Get Ready!", True, (255, 255, 255))
+    pygame.draw.rect(screen, (80, 80, 80),
+                     pygame.Rect(150, 170, 300, 60))
+    screen.blit(countdown_font, (165, 175))
+    pygame.display.flip()
+
 def main():
     pygame.init()
     pygame.mixer.music.load("backgroundmusic.mp3")
@@ -67,11 +78,17 @@ def main():
     snake_collision = False
     game_over = False
     gameover_sound_played = False
+    load_complete = False
 
     score = 0
 
     running = True
     while running:
+        if(not load_complete):
+            show_loading()
+            pygame.time.delay(3000)
+            load_complete = True
+
         # handling key events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -143,12 +160,12 @@ def main():
 
         if snake_position[0] < 0 or snake_position[0] > WIDTH - 10:
             game_over = True
-            show_gameover()
+            # show_gameover()
             # pygame.time.delay(1000)  # ms
             # break
         if snake_position[1] < 0 or snake_position[1] > HEIGHT - 10:
             game_over = True
-            show_gameover()
+            # show_gameover()
             # pygame.time.delay(1000)
             # break
 
@@ -158,7 +175,7 @@ def main():
             if snake_position[0] == segment[0] and snake_position[1] == segment[1]:
                 # snake_collision = True
                 game_over = True
-                show_gameover()
+                # show_gameover()
                 # pygame.time.delay(1000)
                 # break
         if game_over:
