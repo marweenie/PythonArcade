@@ -33,5 +33,5 @@
 
 # Group Evaluations
 **Michael Sepsey** - ![image](https://github.com/user-attachments/assets/8686f225-04f4-48ee-b7b5-3a4f51725a80)<br /><br />
-**Marwa Chebeir** - <br /><br />
+**Marwa Chbeir** - <br /><br />
 **Namaa Mokhtar** - <br /><br />
